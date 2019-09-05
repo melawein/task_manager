@@ -8,7 +8,7 @@
 <div class="navbar-items">
   <%= link_to 'Add a Task', new_task_path, class: 'add-task-btn' %>
 
-  <%= link_to 'Log Out', destroy_user_session_path, class: 'logout-btn'  %>
+  <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "logout-btn" %>
 </div>
 
 </div>

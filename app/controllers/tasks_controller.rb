@@ -26,8 +26,8 @@ class TasksController < ApplicationController
   end
 
   def edit
-    authorize @task
     @task = Task.find(params[:id])
+    authorize @task
   end
 
   def update
