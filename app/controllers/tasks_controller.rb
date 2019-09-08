@@ -19,7 +19,7 @@ class TasksController < ApplicationController
     @task.user = current_user
     authorize @task
     if @task.save
-      redirect_to task_path(@task), notice: 'Task was successfully created.'
+      redirect_to tasks_path, notice: 'Task was successfully created.'
     else
       render :new
     end
@@ -31,6 +31,13 @@ class TasksController < ApplicationController
   end
 
   def update
+    @task = Task.find(params[:id])
+    # @task = Task.update(task_params)
+    if @task.update(task_params)
+      redirect_to @task, notice: 'task was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
