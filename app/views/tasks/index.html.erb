@@ -4,9 +4,10 @@
     <h1>To Do List</h1>
 </div>
   <div class="task-display">
+      <% number = 0 %>
     <% @tasks.each do |task| %>
     <div class="task-info">
-      <h3><%= task.name %>: <%= task.description %>
+      <h3> <%= number += 1 %>. <%= task.name %>: <%= task.description %>
         <%= link_to edit_task_path(task) do %>
         <i class="fas fa-pen"></i>
         <% end %>

@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def index
     # authorize @task
+
     @tasks = policy_scope(Task).order(created_at: :desc)
   end
 
