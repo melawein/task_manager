@@ -11,3 +11,18 @@
 }
 
 
+.task-info {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+  color: black;
+
+  }
+}
+
+.task-description {
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

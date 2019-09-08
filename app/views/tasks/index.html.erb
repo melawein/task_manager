@@ -1,20 +1,17 @@
 <div class="main-img">
   <div class="container-index">
     <div class="list-header">
-    <h1>To Do List</h1>
-</div>
-  <div class="task-display">
+      <h1> <%= current_user.first_name %>'s To Do List</h1>
+    </div>
+    <div class="task-display">
       <% number = 0 %>
-    <% @tasks.each do |task| %>
-    <div class="task-info">
-      <h3> <%= number += 1 %>. <%= task.name %>: <%= task.description %>
-        <%= link_to edit_task_path(task) do %>
-        <i class="fas fa-pen"></i>
-        <% end %>
-
-      </h3>
+      <% @tasks.each do |task| %>
+      <div class="task-list">
+         <h3><%= number += 1 %>. <%= link_to task.name.capitalize, task_path(task), class: 'task-info' %></h3>
+          <% end %>
+        </div>
+<%= link_to 'Add a new Task', new_task_path, class: 'add-btn' %>
+      </div>
     </div>
-    <% end %>
-    </div>
-  </div>
 </div>
+

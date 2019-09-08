@@ -1,6 +1,22 @@
-<h1>Tasks#show</h1>
+<div class="main-img">
+  <div class="container-index">
+
+<h3> <%= link_to tasks_path, class: 'back-btn' do  %>
+  <i class="fas fa-chevron-left"></i> All Tasks
+</h3>
+<% end %>
 
 
-<%= @task.name %>
-<%= @task.description %>
+<div class="task-description">
+
+  <h3><%= @task.name.capitalize %></h3>
+
+  <% number = 0 %>
+  <p><%= number += 1 %>. <%= @task.description %></p>
+
+  <%= link_to 'Edit this task', edit_task_path(@task), class: 'add-btn' %>
+  <%= link_to "Delete", task_path(@task), method: :delete, data: {:confirm => "Are you sure you want to delete this task?"}, class: 'add-btn' %>
+</div>
+  </div>
+</div>
 

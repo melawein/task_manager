@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   def index
     # authorize @task
 
-    @tasks = policy_scope(Task).order(created_at: :desc)
+    @tasks = policy_scope(Task).order(created_at: :asc)
   end
 
   def show
@@ -42,6 +42,10 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    @task = Task.find(params[:id])
+    authorize @task
+    @task.destroy
+    redirect_to tasks_path
   end
 
   private

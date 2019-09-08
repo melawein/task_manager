@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-signin-client_id" content=" 245669251978-a8sac8vp6hh00dgl7tbkgn2ots2nv908.apps.googleusercontent.com">
+
     <title>Task Bubble</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -15,8 +17,10 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= render 'shared/footer' %>
+    <%# render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   </body>
 </html>
