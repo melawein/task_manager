@@ -1,15 +1,15 @@
-
 <div class="add-form">
   <%= simple_form_for(task) do |f| %>
-    <%= f.input :name, placeholder: 'Name of task', label: false %>
-    <%= f.input :description, as: :text, placeholder: 'Write a description of what you need to do here...', label: false %>
+  <%= f.label :name, label: 'Name of Task:' %>
+    <%= f.input :name, placeholder: 'ex. Laundry', label: false %>
+    <%= f.label :description, label: 'Description of Task:' %>
+    <%= f.input :description, as: :text, placeholder: 'Put all of the white clothes in the wash today..', label: false %>
 
     <div class="add-btn">
       <%= f.button :submit, "Get it done!" %>
     </div>
   <% end %>
 </div>
-
 
 
 

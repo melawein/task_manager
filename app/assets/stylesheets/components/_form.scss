@@ -1,8 +1,8 @@
-.new_task {
+#new_task {
   display: flex;
   flex-direction: column;
   height: 70vh;
-  width: 30%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -10,8 +10,10 @@
   height: 150px;
 }
   .form-control {
-    background: #ebcfcf;
+  // background-image: url('https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
     border: rgba(0, 0, 0, .0);
+
+
   }
 
 .add-btn {

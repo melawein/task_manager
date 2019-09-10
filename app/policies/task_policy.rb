@@ -10,7 +10,7 @@ class TaskPolicy < ApplicationPolicy
   end
 
   def show?
-    record.user == user
+    true
   end
 
   def new?
